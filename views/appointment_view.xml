@@ -64,9 +64,9 @@
                     <group>
                         <field name="procedure_line_id" widget="one2many_list" editable="bottom" context="{'default_appointment_id': active_id}">
                             <tree>
-                                <field class="tooth_number_class" name="tooth_no" options="{'no_open': True}" model="dental.procedure.line"/>
-                                <field name="service_item_id" options="{'no_open': True}" model="dental.procedure.line"/>
-                                <field name="cost" readonly="1" model="dental.procedure.line"/>
+                                <field class="tooth_number_class" name="tooth_no" options="{'no_open': True}"/>
+                                <field name="service_item_id" options="{'no_open': True}"/>
+                                <field name="cost" readonly="1"/>
                             </tree>
                         </field>
                     </group>

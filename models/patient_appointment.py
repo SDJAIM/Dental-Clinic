@@ -31,7 +31,11 @@ class PatientAppointment(models.Model):
     ], string="Appointment Reservation Type", tracking=True)
 
     doctor_id = fields.Many2one('clinic.doctor', string="Doctor Name", tracking=True)
-    procedure_line_id = fields.One2many('dental.procedure.line', 'appointment_id', string='Procedures')
+    procedure_line_id = fields.One2many(
+        'appointment.dental.procedure.line',
+        'appointment_id',
+        string='Procedure Lines'
+    )
     chief_complaints = fields.Text("Chief Complains/Notes")
     appointment_attachment_line_id = fields.One2many('appointment.attachment.line', 'appointment_id')
     patient_appointment_prescription_id = fields.One2many('patient.prescription', 'appointment_id')
