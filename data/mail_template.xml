@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Email template for appointment confirmation -->
+        <record id="email_template_appointment_confirmation" model="mail.template">
+            <field name="name">Appointment Confirmation</field>
+            <field name="model_id" ref="model_patient_appointment"/>
+            <field name="subject">Appointment Confirmation - {{ object.name }}</field>
+            <field name="email_from">{{ object.doctor_id.email or user.email or 'no-reply@example.com' }}</field>
+            <field name="email_to">{{ object.patient_id.email | safe }}</field>
+            <field name="body_html" type="html">
+<![CDATA[
+<p>Dear {{ object.patient_id.patient_name }},</p>
+
+<p>Your appointment has been confirmed with the following details:</p>
+
+<ul>
+    <li><strong>Date & Time:</strong> {{ object.start }}</li>
+    <li><strong>Doctor:</strong> {{ object.doctor_id.name | safe }}</li>
+    <li><strong>Type:</strong> {{ dict(object._fields['appointment_type'].selection).get(object.appointment_type) }}</li>
+</ul>
+
+<p>Please arrive 10 minutes before your scheduled appointment time.</p>
+
+<p>If you need to reschedule or cancel your appointment, please contact us as soon as possible.</p>
+
+<p>Best regards,<br/>
+{{ object.doctor_id.name | safe }}<br/>
+Dental Clinic</p>
+]]>
+            </field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+    </data>
+</odoo>

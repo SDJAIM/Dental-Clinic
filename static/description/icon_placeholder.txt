@@ -1,0 +1,9 @@
+ICON PLACEHOLDER
+
+Please add a proper icon.png file here for the module icon to display in Odoo.
+The icon should be:
+- PNG format
+- 70x70 pixels recommended
+- Transparent background preferred
+
+You can use any dental/medical related icon.
