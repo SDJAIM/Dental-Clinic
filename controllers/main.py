@@ -33,7 +33,7 @@ def validate_token(func):
     return wrap
 
 
-class DentalClinicAPI(http.Controller):
+class DentalClinicController(http.Controller):
     
     @http.route("/api/login", methods=["POST"], type="json", auth="none", csrf=False, cors="*")
     def api_login(self, **kw):

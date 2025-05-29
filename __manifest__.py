@@ -7,7 +7,7 @@
     'description': """Helping you to ensure a great experience""",
     'depends': [
         'base', 'account', 'calendar', 'sales_team', 'payment', 'portal', 'utm',
-        'sale', 'mail', 'crm', 'point_of_sale', 'base_setup', 'web'
+        'sale', 'mail', 'crm', 'point_of_sale', 'base_setup', 'web', 'product'
     ],
     'data': [
         # 'security/security.xml',
