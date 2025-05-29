@@ -10,7 +10,7 @@
         'sale', 'mail', 'crm', 'point_of_sale', 'base_setup', 'web'
     ],
     'data': [
-        'security/security.xml',
+        # 'security/security.xml',
         'security/ir.model.access.csv',
         'data/data.xml',
         # 'wizard/remove_invoice_views.xml',
