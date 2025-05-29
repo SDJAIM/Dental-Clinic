@@ -7,8 +7,8 @@
     'depends': ['base', 'account' ,'calendar', 'sales_team', 'payment', 'portal', 'utm', 'sale', 'mail', 'crm',
                 'point_of_sale'],
     'data': [
-        'security/ir.model.access.csv',
         'security/security.xml',
+        'security/ir.model.access.csv',
         'data/data.xml',
         #'wizard/remove_invoice_views.xml',
         'views/appointment_view.xml',
